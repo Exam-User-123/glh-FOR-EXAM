@@ -22,7 +22,6 @@
                 <a href="logout.php"><button id="logout">Log Out</button></a>
             <?php endif; ?>
         </nav>
-        <button onclick="hamburger()" name="hamburger" id="hamburger">☰</button>
     </header>
     <div id="menu">
         <nav>
