@@ -1,0 +1,4 @@
+The array you use for grabbing the user's data works like so:
+$_SESSION[name][number of thing you stored]
+so username would be in this case:
+$_SESSION["user_data"][1]

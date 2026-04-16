@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --champagne-mist: #F9E9CC;
+    --dark-olive: #3B4B0F;
+    --hover: #789721;
+    --other-hover: #faf4e9;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+body.contrast {
+    --champagne-mist2: #1a1a1a;
+    --dark-olive2: #f5f5f5;
+    --hover2: #bebebe;
+    --other-hover2: #2a2a2a;
+}
+
+.contrast header {
+    background-color: var(--champagne-mist2);
+}
+
+.contrast nav a {
+    color: var(--dark-olive2);
+}
+
+.contrast header img {
+    filter: grayscale(100%) brightness(100%);
+}
+
+.contrast nav a:hover {
+    color: var(--hover2);
+}
+
+.contrast #logout {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast #logout:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast .hero {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+}
+
+.contrast .img {
+    filter: grayscale(100%);
+}
+
+.contrast table img {
+    filter: grayscale(100%);
+} 
+
+.contrast #contrastbutton {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast #contrastbutton:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast footer {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+}
+
+.contrast .vr {
+    border-color: var(--dark-olive2);
+}
+
+.contrast hr {
+    border-color: var(--dark-olive2);
+    background-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast footer a {
+    color: var(--dark-olive2);
+}
+
+.contrast footer a:hover {
+    color: var(--hover2);
+}
+
+.contrast input,
+.contrast select {
+    color: var(--dark-olive2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast table, .contrast th, .contrast tr, .contrast td {
+    border-color: var(--dark-olive2);
+}
+
+.contrast button {
+    border-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast button:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast button[type="submit"] {
+    border-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast button[type="submit"]:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast #addtocart {
+    border-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast #addtocart:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast #login {
+    border-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast #login:hover {
+    background-color: var(--dark-olive2);
+    color: var(--champagne-mist2);
+    border-color: var(--dark-olive2);
+}
+
+.contrast #username, .contrast #email, .contrast #password, .contrast #productname, .contrast #productdesc {
+    border-color: var(--dark-olive2);
+    color: var(--dark-olive2);
+}
+
+.contrast #productcost, .contrast #productstock {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+}
+
+.contrast #noaccount a {
+    color: var(--dark-olive2);
+}
+
+.contrast select {
+    background-color: var(--champagne-mist2);
+}
+
+.contrast select option {
+    color: var(--dark-olive2);
+}
+
+.contrast #menu {
+    background-color: var(--champagne-mist2);
+    color: var(--dark-olive2);
+}
+
+header {
+    background-color: var(--champagne-mist);
+    height: 150px;
+    position: relative;
+    z-index: 1;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+header nav {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+nav a {
+    color: var(--dark-olive);
+    text-decoration: none;
+    margin-left: 20px;
+    width: 100px;
+    font-size: xx-large;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--hover);
+    text-decoration: none;
+    margin-left: 20px;
+    width: 100px;
+    font-size: xx-large;
+}
+
+#login {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: xx-large;
+    border-radius: 10px;
+    border: 2px solid var(--dark-olive);
+    color: var(--dark-olive);
+    width: 125px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+#login:hover {
+    background-color: var(--dark-olive);
+    color: var(--champagne-mist);
+    cursor: pointer;
+}
+
+#logout {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: xx-large;
+    border-radius: 10px;
+    border: 2px solid var(--dark-olive);
+    color: var(--dark-olive);
+    width: 135px;
+    font-family: "Nunito", sans-serif;
+    transition: src 0.3s ease;
+}
+
+#logout:hover {
+    background-color: var(--dark-olive);
+    color: var(--champagne-mist);
+    border-color: var(--dark-olive);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--dark-olive);
+    color: var(--champagne-mist);
+    cursor: pointer;
+}
+
+.img img {
+    width: 100%;
+    height: 1000px;
+    margin-top: -100px;
+}
+
+.hero {
+    background-color: var(--dark-olive);
+    color: var(--champagne-mist);
+    margin-top: -400px;
+    position: relative;
+    z-index: 10;
+    font-size: x-large;
+    padding: 10px 0px 0px 30px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    height: 750px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    background-color: #ffffff00;
+    border-bottom: 1px solid var(--champagne-mist);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    height: 50px;
+    font-size: larger;
+    font-family: "Nunito", sans-serif;
+    color: var(--champagne-mist);
+}
+
+form {
+    text-align: center;
+}
+
+input[id="value"] {
+    width: 30px;
+    height: 25px;
+    background-color: #ffffff00;
+    color: var(--champagne-mist);
+    border: 2px solid var(--champagne-mist);
+    border-radius: 10px;
+}
+
+button[type="submit"] {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: xx-large;
+    border-color: var(--champagne-mist);
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--champagne-mist);
+    width: 125px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--champagne-mist);
+    border-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+form button {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: x-large;
+    border-color: var(--champagne-mist);
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--champagne-mist);
+    width: 130px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+#addtocart {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: x-large;
+    border-color: var(--champagne-mist);
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--champagne-mist);
+    width: 150px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+#addtocart:hover {
+    background-color: var(--champagne-mist);
+    border-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+form button:hover {
+    background-color: var(--champagne-mist);
+    border-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+form select {
+    background-color: var(--champagne-mist);
+    height: 50px;
+    color: var(--dark-olive);
+    border-bottom: var(--dark-olive);
+    width: 125px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+select option {
+    color: var(--dark-olive);
+}
+
+button[name="clearcart"] {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: x-large;
+    border-color: var(--champagne-mist);
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--champagne-mist);
+    width: 150px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+button[name="clearcart"]:hover {
+    background-color: var(--champagne-mist);
+    border-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+table, th, tr, td {
+    border-collapse: collapse;
+    border: var(--champagne-mist) 2px solid;
+    font-size: large;
+}
+
+form[id="more"], form[id="less"] {
+    display: inline;
+}
+
+button[id="more"], button[id="less"] {
+    border: var(--champagne-mist) 2px solid;
+    background-color: var(--dark-olive);
+    color: var(--champagne-mist);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    display: inline;
+}
+
+div[id="number"] {
+    display: inline;
+}
+
+div[id="noaccount"] {
+    text-align: center;
+}
+
+div[id="noaccount"] a {
+    color: var(--champagne-mist);
+    transition: color 0.3s ease;
+}
+
+div[id="noaccount"] a:hover {
+    color: var(--other-hover);
+}
+
+button[id="more"]:hover, button[id="less"]:hover {
+    border: var(--champagne-mist) 2px solid;
+    background-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    cursor: pointer;
+}
+
+button[id="signup"] {
+    width: 135px;
+}
+
+table img {
+    height: 110px;
+}
+
+.vr {
+    border-left: #F9E9CC 2px solid;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+
+.cart {
+    position: absolute;
+    right: 30%;
+    top: 0;
+}
+
+.cart li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    text-align: center;
+    margin: -21px 0px;
+    height: 240px;
+    padding: 40px 0px 0px 0px;
+}
+
+
+footer hr {
+    width: 80%;
+    border: 0;
+    height: 2px;
+    background-color: var(--dark-olive);
+    color: var(--dark-olive);
+}
+
+a[id="policy"] {
+    color: var(--dark-olive);
+    font-size: x-large;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+a[id="policy"]:hover {
+    color: var(--hover);
+}
+
+@media (max-width: 1350px)  {
+    html, body {font-size: small;}
+    header nav a {
+        display: none;
+    }
+    .hero-image {
+        width: fit-content;
+    }
+    header {
+        border-radius: 0;
+        position: absolute;
+        width: 100%;
+    }
+    button[id="hamburger"] {
+        height: 50px;
+        width: 100px;
+        border-radius: 10px;
+        position: absolute;
+        display: none;
+        top: 50px;
+        right: 10px;
+        color: var(--dark-olive);
+        background-color: #ffffff00;
+        border-color: var(--dark-olive);
+    }
+    button[id="hamburger"]:hover {
+        color: var(--champagne-mist);
+        background-color: var(--dark-olive);
+        border-color: var(--dark-olive);
+    }
+    div[id="menu"] {
+        position: relative;
+        top: 150px;
+        z-index: 10;
+        width: 100%;
+        background-color: var(--champagne-mist);
+        color: var(--dark-olive);
+    }
+    .vr {
+        display: none;
+    }
+    .cart {
+        position: relative;
+        top: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .hero {
+        height: 1500px;
+    }
+}
+
+
+@media (min-width: 600px) {
+    button[id="hamburger"] {
+        height: 0;
+        display: none;
+    }
+}
+
+#contrastbutton {
+    height: 50px;
+    background-color: #ffffff00;
+    font-size: x-large;
+    border-color: var(--champagne-mist);
+    border-radius: 10px;
+    border: 2px solid;
+    color: var(--champagne-mist);
+    width: 130px;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.3s ease;
+}
+
+#contrastbutton:hover {
+    background-color: var(--champagne-mist);
+    color: var(--dark-olive);
+    border-color: var(--champagne-mist);
+}
