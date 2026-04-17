@@ -11,11 +11,15 @@
         if (!filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS)) {
             $error = "Invalid Username";
         }
-
-        if (!filter_var($email, FILTER_SANITIZE_EMAIL)) {
+        if (empty($username)) {
+            $error = "Invalid Username";
+        }
+        if (!filter_var($email, FILTER_SANITIZE_EMAIL) || strlen($email) <= 0) {
             $error = "Invalid Email";
         }
-
+        if (empty($email)) {
+            $error = "Invalid Email";
+        }
         if (strlen($password) < 6) {
             $error = "Password is too short";
         }
@@ -64,7 +68,13 @@
             <input type="password" name="password" id="password"><br><br>
             <button type="submit">Log In</button>
         </form><br>
-        <? echo $error ?>
+        <?php 
+            if (empty($error)) {
+                echo "";
+            } else {
+                echo $error;
+            }
+        ?>
         <div id="noaccount">Don't have an account? Sign up <a href="signup.php">here!</a></div>
     </div>
     <?php include "segments/footer.php"; ?>
