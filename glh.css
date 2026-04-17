@@ -22,24 +22,29 @@ body.contrast {
 
 .contrast header {
     background-color: var(--champagne-mist2);
+ 
 }
 
 .contrast nav a {
     color: var(--dark-olive2);
+ 
 }
 
 .contrast header img {
     filter: grayscale(100%) brightness(100%);
+ 
 }
 
 .contrast nav a:hover {
     color: var(--hover2);
+ 
 }
 
 .contrast #logout {
     background-color: var(--champagne-mist2);
     color: var(--dark-olive2);
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast #logout:hover {
@@ -51,20 +56,24 @@ body.contrast {
 .contrast .hero {
     background-color: var(--champagne-mist2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast .img {
     filter: grayscale(100%);
+ 
 }
 
 .contrast table img {
     filter: grayscale(100%);
+ 
 } 
 
 .contrast #contrastbutton {
     background-color: var(--champagne-mist2);
     color: var(--dark-olive2);
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast #contrastbutton:hover {
@@ -76,20 +85,24 @@ body.contrast {
 .contrast footer {
     background-color: var(--champagne-mist2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast .vr {
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast hr {
     border-color: var(--dark-olive2);
     background-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast footer a {
     color: var(--dark-olive2);
+ 
 }
 
 .contrast footer a:hover {
@@ -100,15 +113,18 @@ body.contrast {
 .contrast select {
     color: var(--dark-olive2);
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast table, .contrast th, .contrast tr, .contrast td {
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast button {
     border-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast button:hover {
@@ -120,6 +136,7 @@ body.contrast {
 .contrast button[type="submit"] {
     border-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast button[type="submit"]:hover {
@@ -131,6 +148,7 @@ body.contrast {
 .contrast #addtocart {
     border-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast #addtocart:hover {
@@ -142,17 +160,20 @@ body.contrast {
 .contrast #login {
     border-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast #login:hover {
     background-color: var(--dark-olive2);
     color: var(--champagne-mist2);
     border-color: var(--dark-olive2);
+ 
 }
 
 .contrast #username, .contrast #email, .contrast #password, .contrast #productname, .contrast #productdesc {
     border-color: var(--dark-olive2);
     color: var(--dark-olive2);
+ 
 }
 
 .contrast #productcost, .contrast #productstock {
@@ -268,7 +289,7 @@ button:hover {
     padding: 10px 0px 0px 30px;
     border-top-left-radius: 75px;
     border-top-right-radius: 75px;
-    height: 750px;
+    height: 1100px;
 }
 
 input[type="email"], input[type="password"], input[type="text"] {
