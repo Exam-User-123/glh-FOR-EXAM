@@ -25,13 +25,16 @@
             <button id="contrastbutton" name="enable" value="1" onclick="enable()"></button>
         </form>
 
+        <?php if ((!$purchases)): ?>
         <h3>Order History</h3>
         <?php foreach ($purchases as $purchase): ?>
             <?php if ($purchase["user_id"] === $_SESSION["user_data"][0]): ?>
             <p>Purchase <?= $purchase["purchase_id"] ?> - <?= $purchase["purchase_array"] ?></p>
             <?php endif; ?>
         <?php endforeach; ?>
-        <p>Nothing here!</p>
+        <?php else: ?>
+            <p>Nothing else to look at!</p>
+        <?php endif; ?>
     </div>
     <?php include "segments/footer.php"; ?>
 </body>
