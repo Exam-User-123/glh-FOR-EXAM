@@ -12,23 +12,40 @@
         if (!filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS)) {
             $error = "Invalid Username";
         }
-
+        if (empty($username)) {
+            $error = "Invalid Username";
+        }
         if (!filter_var($email, FILTER_SANITIZE_EMAIL)) {
             $error = "Invalid Email";
         }
-
+        if (empty($email)) {
+            $error = "Invalid Email";
+        }
         if (strlen($password) < 6) {
             $error = "Password is too short";
         }
 
-        $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $username, $email, $password_hash, $role);
-        
-        if ($stmt->execute()) {
-            $error = "User has been registered!";
-            session_start();
-            header("Location: login.php");
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($user = $result->fetch_assoc()) {
+            if ($user["email"] === $email) {
+                $error = "This account already exists";
+            }
         }
+
+        $stmt2 = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
+        $stmt2->bind_param("ssss", $username, $email, $password_hash, $role);
+        
+        if (empty($error)) {
+            if ($stmt2->execute()) {
+                session_start();
+                header("Location: login.php");
+            }
+        }
+        
 
         $stmt->close();
         mysqli_close($conn);
@@ -65,7 +82,13 @@
             </select><br><br>
             <button type="submit" id="signup">Sign Up</button>
         </form><br>
-        <? echo $error ?>
+        <?php 
+            if (empty($error)) {
+                echo "";
+            } else {
+                echo $error;
+            }
+        ?>
         <div id="noaccount">Already have an account? Login <a href="login.php">here!</a></div>
     </div>
     <?php include "segments/footer.php"; ?>
