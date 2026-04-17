@@ -21,18 +21,31 @@
         if (!filter_var($cost, FILTER_SANITIZE_NUMBER_FLOAT)) {
             $error = "Invalid cost";
         }
-
-        $stmt = $conn->prepare("INSERT INTO products (product_name, product_desc, product_stock, product_cost, product_image) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssdds", $name, $info, $stock, $cost, $img);
-
-        if ($stmt->execute()) {
-            $error = "Item successfully added!";
-        } else {
-            $error = "Item has not been added";
+        if ($productname === "") {
+            $error = "Invalid Name";
+        }
+        if ($productdesc === "") {
+            $error = "Invalid Description";
+        }
+        if ($stock <= 0) {
+            $error = "Invalid stock";
+        }
+        if ($cost <= 0) {
+            $error = "Invalid stock";
         }
 
+        if ($error === "") {
+            $stmt = $conn->prepare("INSERT INTO products (product_name, product_desc, product_stock, product_cost, product_image) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssdds", $name, $info, $stock, $cost, $img);
 
-    header("Location: index.php");
+            if ($stmt->execute()) {
+                $error = "Item successfully added!";
+                header("Location: index.php");
+            } else {
+                $error = "Item has not been added";
+            }
+        }
+    
     $conn->close();
     $stmt->close();
     }
@@ -72,6 +85,7 @@
             <input type="file" name="productimage" id="productimage" accept="image/*"><br><br>
             <button type="submit">Go</button>
         </form>
+        <?php echo $error; ?>
     </div>
     <?php include "segments/footer.php"; ?>
 </body>
