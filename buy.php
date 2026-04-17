@@ -58,47 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="hero" id="hero">
         <h1>Products</h1>
         <p><?= $error ?></p>
-        <table>
-            <tr>
-                <th>Product Image</th>
-                <th>Information</th>
-            </tr>
-            <?php foreach ($products as $product): ?>
-            <tr>
-                <td><img src="<?= $product["product_image"] ?>" alt="<?php $product["product_name"] ?>"></td>
-                <td>
-                    <h4><?= $product["product_name"] ?></h4>
-                    <h5>£<?= $product["product_cost"] ?></h5>
-                    <h5>In Stock: <?= $product["product_stock"] ?></h5>
-                    <p><?= $product["product_desc"] ?></p>
-                    <br>
-                    <form action="" method="post">
-                        <input type="text" name="productname" hidden value="<?= $product["product_name"] ?>">
-                        <input type="number" name="productcost" hidden value="<?= $product["product_cost"] ?>">
-                        <input type="number" name="productstock" hidden value="<?= $product["product_stock"] ?>">
-                        <button type="submit" name="addtocart" id="addtocart">Add to Cart</button>
-                    </form>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <div id="vr" class="vr"></div>
-        <div class="cart" id="cart">
-            <h1>Cart</h1>
-            <?php if (!empty($_SESSION["cart"])): ?>
-    <?php foreach ($_SESSION["cart"] as $item): ?>
-        <p>
-            <?= htmlspecialchars($item["product"]) ?> -
-            £<?= number_format($item["cost"], 2) ?> x
-            <?= $item["quantity"] ?>
-        </p>
-        <?php $total += $item["cost"]*$item["quantity"]; ?>
-    <?php endforeach; ?>
-    <p>Total: £<?= number_format($total, 2) ?></p>
-    <form action="checkout.php" method="post"><button>Checkout</button></form>
-<?php endif; ?>
-            <br>
-            <form action="" method="post"><button type="submit" name="clearcart">Clear Cart</button></form>
+        <?php include "segments/productstable.php"; ?>
+        <?php include "segments/cartone.php"; ?>
         </div>
     </div>
     <?php include "segments/footer.php"; ?>
