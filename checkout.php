@@ -2,7 +2,7 @@
     session_start();
     $error = "";
     $total = 0;
-    if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST["checkout"]))) {
+    if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST["checkout"]) && (isset($_SESSION["user_data"])))) {
         include "segments/connect.php";
         $json = json_encode($_SESSION["cart"]);
         $id = $_SESSION["user_data"][0];
@@ -13,6 +13,9 @@
             $error = "Order successful!";
             header("Location: index.php");
         }
+    }
+    if (!isset($_SESSION["user_data"])) {
+        $error = "Cannot purchase unless you have an account!";
     }
 ?>
 <!DOCTYPE html>
@@ -54,6 +57,7 @@
         <br>
         <form action="buy.php" method="post"><button>Back</button></form>
         </div>
+        <?php echo $error ?>
     </div>
     <?php include "segments/footer.php"; ?>
 </body>
