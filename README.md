@@ -4,4 +4,3 @@ If you have been directed to this repository and are an examiner, please downloa
 
 ## ⚠️ WARNING ⚠️
 These key editions of my work are not actual solutions, but prototypes used to demonstrate how certain functions would work.
-If you wish to download any of these versions, please do so before the date of May 8th 2026, as I will not be using MFA on this account.
